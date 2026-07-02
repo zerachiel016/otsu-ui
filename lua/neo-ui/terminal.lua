@@ -72,7 +72,7 @@ local function create(term)
   })
 
   draw(term)
-  vim.fn.jobstart(vim.o.shell, {term = true})
+  vim.fn.jobstart({vim.o.shell}, {term = true})
 
   M.terms[tostring(term.buf)] = term -- Save term opts
 end
